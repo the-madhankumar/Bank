@@ -1,0 +1,286 @@
+<html>
+<head>
+<style>
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+input[type=text]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.button_css:active
+{
+background-color:powderblue;
+color:blue;
+background:powderblue;
+box-shadow:10px 10px 5px #ADD8E6;
+transform:translateY(4px);
+}
+button {
+  background-color:aqua ;
+  color: blue;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  opacity: 0.9;
+border-radius:25px;
+font-family:Vineta BT;
+font-size:20px;
+}
+button:hover{
+  background-color:#7649fe;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  opacity: 1.5px;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+border:10px solid #ddd;
+height:100%;
+}
+th,td{
+text-align:left;
+}
+tr:nth-child(even){
+background-color:lightblue;
+}
+tr:nth-child(odd){
+background-color:lightblue;
+}
+a{text-decoration:none;}
+</style>
+</head>
+<body>
+<table>
+<tr><th colspan=2><marquee scrollamount=10><p><h1>
+<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPECUNIA BANK&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img  src="money.png" width="50" height="50">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1></p></marquee>
+</th></tr>
+<tr>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id01').style.display='block'" style="width:400px;" class="button_css">DEPOSIT</button></td>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id02').style.display='block'" style="width:400px;float:right;" class="button_css">SEND MONEY</button></td>
+</tr>
+<tr>
+<tr>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id03').style.display='block'" style="width:400px;" class="button_css">WITHDRAW</button></td>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id04').style.display='block'" style="width:400px;float:right;" class="button_css">TRANSACTION HISTORY</button></td>
+</tr>
+<tr>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id05').style.display='block'" style="width:400px;" class="button_css">BALANCE</button></td>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id06').style.display='block'" style="width:400px;float:right;" class="button_css">MESSAGE TO</button></td>
+</tr>
+<tr>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id07').style.display='block'" style="width:400px;" class="button_css">MESSAGE FROM</button></td>
+<td style="padding-left:10px;" ><button onclick="document.getElementById('id08').style.display='block'" style="width:400px;float:right;" class="button_css">LOG OUT</button></td>
+</tr>
+</table>
+
+
+
+
+
+<div id="id01" class="modal">
+  <form class="modal-content" method="post" action="deposit2.php">
+    <div class="container">
+      <hr>
+      <label ><b><center style="font-size:50px;">ENTER MONEY</center></b></label>
+      <input type="text" placeholder="Enter amount" name="money" required>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">submit</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+
+<div id="id02" class="modal">
+  <form class="modal-content" method="post" action="transaction2.php">
+    <div class="container">
+      <hr>
+      <label for="psw"><b><center style="font-size:50px;">RECEIVER USERNAME</center></b></label>
+      <input type="text" placeholder="username" name="rusername" required>
+<label for="psw"><b><center style="font-size:50px;">RECEIVER NAME</center></b></label>
+      <input type="text" placeholder="name" name="rname" required>
+<label for="psw"><b><center style="font-size:50px;">AMOUNT</center></b></label>
+      <input type="text" placeholder="Enter amount" name="money" required>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">submit</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+<div id="id03" class="modal">
+  <form class="modal-content" method="post" action="withdraw2.php">
+    <div class="container">
+      <hr>
+      <label for="psw"><b><center style="font-size:50px;">ENTER MONEY</center></b></label>
+      <input type="text" placeholder="Enter amount" name="money" required>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">submit</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+
+<div id="id04" class="modal">
+  <form class="modal-content" method="post" action="transhis1.php">
+    <div class="container">
+      <hr>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">VIEW TRANSACTION HISTORY</submit></center>
+</div>
+  </form>
+</div>
+
+
+<div id="id07" class="modal">
+  <form class="modal-content" method="post" action="msg2.php">
+    <div class="container">
+      <hr>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">MESSAGE FROM</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+
+
+<div id="id08" class="modal">
+  <form class="modal-content" method="post" action="logout.php">
+    <div class="container">
+      <hr>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">LOG OUT</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+
+<div id="id05" class="modal">
+  <form class="modal-content" method="post" action="balance2.php">
+    <div class="container">
+      <hr>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">VIEW BALANCE</submit></center>
+</div>
+  </form>
+</div>
+
+
+
+
+
+<div id="id06" class="modal">
+  <form class="modal-content" method="post" action="message2.php">
+    <div class="container">
+      <hr>
+      <label for="psw"><b><center style="font-size:50px;">RECEIVER USERNAME</center></b></label>
+      <input type="text" placeholder="username" name="rusername" required>
+<label for="psw"><b><center style="font-size:50px;">MESSAGE</center></b></label>
+      <input type="text" placeholder="Enter message" name="message" required>
+<center><button style="width:400px;color:black;font-size:20px;" class="button_css" type="submit">submit</submit></center>
+</div>
+  </form>
+</div>
+<script>
+
+
+
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+var modal2 = document.getElementById('id02');
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+
+var modal3 = document.getElementById('id03');
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
+
+var modal4 = document.getElementById('id04');
+window.onclick = function(event) {
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+}
+
+
+var modal5 = document.getElementById('id05');
+window.onclick = function(event) {
+  if (event.target == modal5) {
+    modal5.style.display = "none";
+  }
+}
+
+
+var modal6 = document.getElementById('id06');
+window.onclick = function(event) {
+  if (event.target == modal6) {
+    modal6.style.display = "none";
+  }
+}
+
+
+var modal7 = document.getElementById('id07');
+window.onclick = function(event) {
+  if (event.target == modal7) {
+    modal7.style.display = "none";
+  }
+}
+
+
+var modal8 = document.getElementById('id08');
+window.onclick = function(event) {
+  if (event.target == modal8) {
+    modal8.style.display = "none";
+  }
+}
+
+
+
+</script>
+</body>
+</html>
